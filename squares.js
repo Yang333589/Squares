@@ -3,11 +3,6 @@ let squareCount = parseInt(Math.random() * 21) + 30; //30-50 squares
 let zIndex = 100;
 console.log(squareCount);
 
-for (let i = 0; i < squareCount; i++) {
-    //make a square
-    addSquares();
-}
-
 function addSquares() {
     //make a square
     let square = document.createElement("div");
@@ -39,7 +34,7 @@ function changeColor() {
 }
 
 function bringToFront() {
-    if (this.style.zIndex == zIndex-1) {
+    if (this.style.zIndex == zIndex - 1) {
         this.remove();
         console.log("removed");
     } else {
@@ -49,9 +44,12 @@ function bringToFront() {
 }
 
 
-
-
-window.onload = addSquares;
+window.onload = function() {
+    for (let i = 0; i < squareCount; i++) {
+        //make a square
+        addSquares();
+    }
+};
 
 
 //make a function that add one square (make sure that it is the onclick for the button)
