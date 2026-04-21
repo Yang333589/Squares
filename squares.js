@@ -41,7 +41,7 @@ function changeColor(){
 
 
 
-window.onload = addSquares();
+window.onload = addSquares;
 
 
 //make a function that add one square (make sure that it is the onclick for the button)
