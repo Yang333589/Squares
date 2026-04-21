@@ -15,6 +15,7 @@ function addSquares() {
     square.style.left = parseInt(Math.random() * 650) + "px";
     square.style.top = parseInt(Math.random() * 250) + "px";
     square.style.backgroundColor = getRandomColor();
+    square.onclick = bringToFront;
     squareArea.append(square);
 }
 
@@ -37,6 +38,10 @@ function changeColor(){
     }
 }
 
+function bringToFront(){
+    this.style.zIndex = zIndex;
+    zIndex++;
+}
 
 
 
