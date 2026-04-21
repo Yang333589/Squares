@@ -28,10 +28,12 @@ function getRandomColor() {
     return color;
 }
 
-function changeColor() {
+function changeColor(){
     //an array
     let allSquares = document.querySelectorAll(".square");
-    //for loop
+    for (i=0; i < allSquares.length; i++){
+        allSquares[i].style.backgroundColor = getRandomColor();
+    }
 }
 
 
