@@ -7,8 +7,11 @@ function addSquares() {
     //make a square
     let square = document.createElement("div");
     square.className = "square";
-    square.style.left = parseInt(Math.random() * 650) + "px";
-    square.style.top = parseInt(Math.random() * 250) + "px";
+    let ranSize = parseInt(Math.random()*11) + 45 + "px";
+    square.style.width = ranSize;
+    square.style.height = ranSize;
+    square.style.left = parseInt(Math.random() * 645) + "px";
+    square.style.top = parseInt(Math.random() * 245) + "px";
     square.style.backgroundColor = getRandomColor();
     square.onclick = bringToFront;
     squareArea.append(square);
