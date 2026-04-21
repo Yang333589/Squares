@@ -30,17 +30,22 @@ function getRandomColor() {
     return color;
 }
 
-function changeColor(){
+function changeColor() {
     //an array
     let allSquares = document.querySelectorAll(".square");
-    for (i=0; i < allSquares.length; i++){
+    for (i = 0; i < allSquares.length; i++) {
         allSquares[i].style.backgroundColor = getRandomColor();
     }
 }
 
-function bringToFront(){
-    this.style.zIndex = zIndex;
-    zIndex++;
+function bringToFront() {
+    if (this.style.zIndex == zIndex-1) {
+        this.remove();
+        console.log("removed");
+    } else {
+        this.style.zIndex = zIndex;
+        zIndex++;
+    }
 }
 
 
