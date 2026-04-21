@@ -1,5 +1,6 @@
 let squareArea = document.querySelector("#squarearea");
 let squareCount = parseInt(Math.random() * 21) + 30; //30-50 squares
+let zIndex = 100;
 console.log(squareCount);
 
 for (let i = 0; i < squareCount; i++) {
@@ -35,6 +36,12 @@ function changeColor(){
         allSquares[i].style.backgroundColor = getRandomColor();
     }
 }
+
+
+
+
+
+window.onload = addSquares();
 
 
 //make a function that add one square (make sure that it is the onclick for the button)
